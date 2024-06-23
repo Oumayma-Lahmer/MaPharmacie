@@ -1,0 +1,109 @@
+import { HttpClient, HttpParams } from '@angular/common/http';
+import { Injectable } from '@angular/core';
+import { BehaviorSubject, Observable } from 'rxjs';
+import { catchError, map } from 'rxjs/operators';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class PanierService {
+  //private baseUrl = 'http://localhost:8080/api/produit';
+  //private panierElemSubject= new BehaviorSubject<PanierResponse>({ elemList: [] });
+  //public panierElem$ = this.panierElemSubject.asObservable();
+  products : any[] = [];
+  constructor(private http: HttpClient) {}
+getProducts(){
+  return this.products;
+}
+saveCart(){
+  localStorage.setItem('cart_items', JSON.stringify(this.products));
+}
+addToCart(addedProduct : any){
+  this.products.push(addedProduct);
+  this.saveCart();
+}
+loadCart(){
+  this.products = JSON.parse(localStorage.getItem('cart_items') as any || '[]');
+}
+productInCart(product: any){
+  return this.products.findIndex((x:any) => x.id === product.id) > -1;
+}
+removeProduct(product: any){
+  const index = this.products.findIndex((x:any) => x.id === product.id);
+  if(index > -1){
+    this.products.splice(index, 1);
+    this.saveCart();
+  }
+}
+clearProducts(){
+  localStorage.clear();
+}
+
+/*
+  ajouterAuPanier(id: number, quantite: number): Observable<any> {
+    const params = new HttpParams()
+      .set('id', id.toString())
+      .set('quantite', quantite.toString());
+
+    return this.http.post<any>(`${this.baseUrl}/addToPanier`,{}, { params, withCredentials: true }).pipe(
+      map(response => {
+        console.log('Response from server:', response);
+        this.loadPanier(); // Load the cart after adding the item
+        return response;
+      }),
+      catchError(error => {
+        console.error('Erreur lors de l\'ajout au panier', error);
+        throw error; // Propagate the error to the component
+      })
+    );
+   
+  }
+
+  getPanier(): Observable<PanierResponse> {
+    return this.http.get<PanierResponse>(`${this.baseUrl}/panier`, { withCredentials: true }).pipe(
+      map(response => {
+        this.panierElemSubject.next(response);
+        return response;
+      })
+    ); 
+   
+    //return this.http.get<any>(`${this.baseUrl}/panier`, { withCredentials: true });
+  }
+
+  getPanierCount(): Observable<number> {
+    return this.panierElem$.pipe(
+      map(response => response.elemList.length)
+    );
+  }
+
+  retirerDuPanier(id: number): void {
+    this.http.delete(`${this.baseUrl}/removeFromPanier/${id}`, { withCredentials: true }).subscribe(
+      () => this.loadPanier(),
+      error => console.error('Erreur lors de la suppression du produit du panier', error)
+    );
+  }
+
+  clearPanier(): void {
+    this.panierElemSubject.next({ elemList: [] });
+  }
+
+  loadPanier(): void {
+    this.getPanier().subscribe(panier => {
+      this.panierElemSubject.next(panier);
+    },
+    error => {
+      console.error('Failed to load panier', error);
+    }
+  );
+  /*this.http.get<PanierResponse>(`${this.baseUrl}/panier`, { withCredentials: true }).subscribe(
+    response => this.panierElemSubject.next(response),
+    error => console.error('Erreur lors du chargement du panier', error)
+  );///////
+  }
+}
+
+interface PanierResponse {
+  elemList: any[];
+}
+*/
+}

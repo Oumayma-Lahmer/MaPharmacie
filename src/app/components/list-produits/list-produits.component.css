@@ -1,0 +1,178 @@
+body {
+    background-color: #E5B653;
+    color: #254C47; /* Set text color for better contrast */
+  font-family: sans-serif;
+  }
+  .container {
+    max-width: 1000px; /* Adjust container width as needed */
+  }
+  .section-header {
+    color: #254C47; /* Use primary color for headings */
+  }
+  .card {
+    background-color: #fff;
+    border-radius: 30px; /* Coins arrondis */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+     /* Espace en haut et en bas 
+     height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    margin-bottom: 30px;
+     */
+  }
+  .card:hover{
+    transform: scale(1.02);
+  }
+  /*
+  .card-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  */
+  .card-title{
+    font-weight: bold;
+  }
+  .card-text {
+    color: #6C757D; /* Use a muted text color */
+  }
+  .product-image {
+    max-width: 100%;
+    max-height: 150px; /* Ajustement de la hauteur */
+    width: auto;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .quantity-section{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem; /* Ajout d'espace en bas */
+  }
+  .quantity-section button {
+    padding: 5px 7px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+ /*
+  .qq {
+    display: flex;
+    justify-content: center;
+    width: 50px; /* Réduction de la taille 
+    margin-left: auto;
+    margin-right: auto;
+  }
+ */
+  
+  .input-group {
+    text-align: center;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .input-group button {
+    /* Target the buttons to reduce size */
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    margin: 0 5px; /* Add some margin between buttons */
+  }
+  
+  .input-group input {
+    /* Target the input field to reduce size */
+    width: 60px;
+    padding: 5px;
+    text-align: center; /* Centrer le texte */
+  }
+  
+  .product-card {
+    background-color: #fff;
+    border-radius: 10px; /* Adjust the value for the desired roundness */
+    
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    height: 100%;
+  }
+  
+  .btn-custom {
+    background-color: #E5B653; /* Couleur de base */
+    border-color: #E5B653; /* Couleur de la bordure */
+    color: #254C47; /* Couleur du texte */
+    transition: background-color 0.3s ease;
+    width: 100%;
+  
+  }
+  
+  .btn-custom:hover {
+    background-color: #254C47; /* Couleur de survol */
+   
+    color: #E5B653; /* Couleur du texte de survol */
+ 
+  }
+  .btn-lg {
+    padding: 1rem 1.5rem;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    border-radius: 0.75rem;
+ 
+  }
+  
+  .btn-pill {
+    border-radius: 50px;
+   
+  }
+  
+  .bi {
+    font-size: 1.25rem; /* Adjust icon size as needed */
+  }
+  
+  .product-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  
+  .product-info img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 1rem;
+  }
+  
+  .product-info h5 {
+    font-weight: bold;
+    margin-bottom: 0.25rem;
+  }
+  
+  .product-info span {
+    font-size: 1rem;
+    color: #6C757D;
+  }
+  
+  .rounded-lg {
+    border-radius: 1rem;
+  }
+  
+  .shadow {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .p-4 {
+    padding: 1rem;
+  }
+  
+  .bg-light {
+    background-color: #f8f9fa;
+  }
+  .panier{
+    margin-top: 100px;
+    width: 20%;
+    margin-left: 190px;
+  }
