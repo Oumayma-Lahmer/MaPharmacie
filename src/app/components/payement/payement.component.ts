@@ -16,7 +16,7 @@ export class PayementComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    this.cartTotal = JSON.parse(localStorage.getItem('cart_total') as any) || [];
+    this.cartTotal = JSON.parse(localStorage.getItem('cart_total') as any) || "";
     console.log(this.cartTotal);
     //this.initConfig();
     this.loadStripe();

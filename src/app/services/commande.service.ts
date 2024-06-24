@@ -38,11 +38,11 @@ export class CommandeService {
       const formData: FormData = new FormData();
       formData.append('file', file);
       formData.append('clientId', clientId.toString());
-      produitIds.forEach((id, index) => {
-        formData.append(`produitId[${index}]`, id.toString());
+      produitIds.forEach((id) => {
+        formData.append(`produitId`, id.toString());
       });
   
-      return this.http.post(this.baseUrl, formData);
+      return this.http.post(`${this.baseUrl}/uploadOrdonnance`, formData);
     }
 
 }

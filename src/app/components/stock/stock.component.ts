@@ -9,9 +9,7 @@ import { GestionService } from 'src/app/services/gestion.service';
   styleUrls: ['./stock.component.css']
 })
 export class StockComponent implements OnInit {
-
   products : any;
-
   productSelect : any;
   formModification: FormGroup;
 

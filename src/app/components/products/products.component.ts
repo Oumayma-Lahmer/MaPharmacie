@@ -27,13 +27,16 @@ export class ProductsComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
+  onFileSelected(event: any): void {
+    this.selectedFile = event.target.files[0];
+  }
  
   submitForm() {
     if (!this.selectedFile) {
       alert('Please select an image file');
       return;
     }
-
     const formData = new FormData();
     formData.append('nomCommercial', this.Products.nomCommercial);
     formData.append('prix', this.Products.prix.toString());
@@ -92,9 +95,7 @@ export class ProductsComponent implements OnInit {
     console.log('Alerte fermée');
     this.IsAlert = false;
   }
-  onFileSelected(event: any): void {
-    this.selectedFile = event.target.files[0];
-  }
+  
   
 }
 

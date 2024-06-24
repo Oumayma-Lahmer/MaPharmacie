@@ -2,7 +2,7 @@
     <div class="form-container">
       <h2 class="mb-4">Ajouter un nouveau Produit</h2>
     
-      <form (ngSubmit)="submitForm()" #ProductsForm="ngForm">
+      <form (ngSubmit)="submitForm()" #ProductsForm="ngForm" enctype="multipart/form-data">
           <div class="form-group">
             <label for="nomCommercial" class="mb-1">NomCommercial :</label>
             <input type="text" class="form-control" id="nomCommercial" name="nomCommercial" [(ngModel)]="Products.nomCommercial" required>

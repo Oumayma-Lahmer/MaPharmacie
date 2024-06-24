@@ -12,38 +12,38 @@
                     
                     <div class="d-flex flex-row align-items-center mb-4">
                       <div class="form-outline flex-fill mb-0">
-                        <input type="text" id="nom" class="form-control" formControlName="nom" />
                         <label class="form-label" for="nom">Nom</label>
+                        <input type="text" id="nom" class="form-control" formControlName="nom" />
                       </div>
                     </div>
                     <div class="d-flex flex-row align-items-center mb-4">
                       <div class="form-outline flex-fill mb-0">
-                        <input type="text" id="prenom" class="form-control" formControlName="prenom" />
                         <label class="form-label" for="prenom">Prénom</label>
+                        <input type="text" id="prenom" class="form-control" formControlName="prenom" />
                       </div>
                     </div>
                     <div class="d-flex flex-row align-items-center mb-4">
                       <div class="form-outline flex-fill mb-0">
-                        <input type="email" id="email" class="form-control" formControlName="email" />
                         <label class="form-label" for="email">Email</label>
+                        <input type="email" id="email" class="form-control" formControlName="email" />
                       </div>
                     </div>
                     <div class="d-flex flex-row align-items-center mb-4">
                       <div class="form-outline flex-fill mb-0">
-                        <input type="password" id="password" class="form-control" formControlName="password" />
                         <label class="form-label" for="password">Mot de passe</label>
+                        <input type="password" id="password" class="form-control" formControlName="password" />
                       </div>
                     </div>
                     <div class="d-flex flex-row align-items-center mb-4">
                       <div class="form-outline flex-fill mb-0">
-                        <input type="text" id="adresse" class="form-control" formControlName="adresse" />
                         <label class="form-label" for="adresse">Adresse</label>
+                        <input type="text" id="adresse" class="form-control" formControlName="adresse" />
                       </div>
                     </div>
                     <div class="d-flex flex-row align-items-center mb-4">
                       <div class="form-outline flex-fill mb-0">
-                        <input type="text" id="telephone" class="form-control" formControlName="telephone" />
                         <label class="form-label" for="telephone">Numéro du téléphone</label>
+                        <input type="text" id="telephone" class="form-control" formControlName="telephone" />
                       </div>
                     </div>
                     <div class="d-flex flex-row align-items-center mb-4">
@@ -58,23 +58,22 @@
                     <div *ngIf="selectedRole == 'employe'">
           <!-- Champs spécifiques pour le rôle Patient -->
                       <div class="form-outline flex-fill mb-0">
-                        <input type="number" id="experience" class="form-control" formControlName="experience" />
                         <label class="form-label" for="experience">Experience</label>
+                        <input type="number" id="experience" class="form-control" formControlName="experience" />
                       </div>
                      
                     </div>
                     <div *ngIf="selectedRole === 'client'">
                       <!-- Champs spécifiques pour le rôle Client -->
                       <div class="form-outline flex-fill mb-0">
-                        <input type="number" id="fidelite" class="form-control" formControlName="fidelite" />
                         <label class="form-label" for="fidelite">Fidelité</label>
+                        <input type="number" id="fidelite" class="form-control" formControlName="fidelite" />
                       </div>
-                    
                     </div>
                     
                     <div class="form-check d-flex justify-content-center mb-5">
-                      <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3c" formControlName="terms" />
                       <label class="form-check-label" for="form2Example3">
+                      <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3c" formControlName="terms" />
                         J'accepte toutes les déclarations dans <a href="#!">Conditions d'utilisation</a>
                       </label>
                     </div>
